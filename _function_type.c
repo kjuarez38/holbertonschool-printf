@@ -23,7 +23,7 @@ int _function_type(char chara, va_list avar)
 	{
 		if (*list[i].t == chara)
 		{
-			if (*(list[i] + 1) == 'd' || *(list[i].t + 1) == 'i')
+			if (*(list[i].t + 1) == 'd' || *(list[i].t + 1) == 'i')
 			{
 				return (_print_int(avar));
 			}
