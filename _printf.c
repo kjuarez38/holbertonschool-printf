@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	va_list avar;
 	int totalLen = 0;
 
-	if (!format || (strlen(format) ==  && format[0] == '%'))
+	if (!format || (strlen(format) == 1 && format[0] == '%'))
 		/*Vérifier si la chaîne de format est NULL*/
 		return (-1);
 
