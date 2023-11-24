@@ -24,4 +24,3 @@ typedef struct formats
 	int (*f)(va_list p);
 } formats;
 #endif
-
