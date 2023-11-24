@@ -2,12 +2,11 @@
 
 /**
  * _function_type - check the code
- * @chara: char
+ * @c: char
  * @avar: va_list
  * Return: Number of character print
  */
-
-int _function_type(char chara, va_list avar)
+int _function_type(char c, va_list avar)
 {
 	formats list[] = {
 		{"c", _print_char},
@@ -21,7 +20,7 @@ int _function_type(char chara, va_list avar)
 
 	while (list[i].t != NULL)
 	{
-		if (*list[i].t == chara)
+		if (*list[i].t == c)
 		{
 			if (*(list[i].t + 1) == 'd' || *(list[i].t + 1) == 'i')
 			{
@@ -35,14 +34,15 @@ int _function_type(char chara, va_list avar)
 		i++;
 	}
 
-	if (chara == '%')
+	if (c == '%')
 	{
-		return (putchar('%'));
+		return (_putchar('%'));
 	}
 	else
 	{
-		putchar('%');
-		putchar(chara);
+		_putchar('%');
+		_putchar(c);
 		return (2);
 	}
 }
+
