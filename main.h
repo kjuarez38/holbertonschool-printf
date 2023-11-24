@@ -11,7 +11,6 @@ int _print_arg_string(va_list avar);
 int _print_string(char *s);
 int _print_char(va_list avar);
 int _function_type(char c, va_list avar);
-int _putchar(char c);
 int _print_int(va_list arg);
 /**
  * struct formats - Struct dog
