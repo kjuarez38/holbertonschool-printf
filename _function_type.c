@@ -37,12 +37,12 @@ int _function_type(char chara, va_list avar)
 
 	if (chara == '%')
 	{
-		return (_putchar('%'));
+		return (putchar('%'));
 	}
 	else
 	{
-		_putchar('%');
-		_putchar(c);
+		putchar('%');
+		putchar(chara);
 		return (2);
 	}
 }

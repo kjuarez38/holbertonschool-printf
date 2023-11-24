@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(*format);
+			putchar(*format);
 			/*Appeler directement _putchar pour imprimer le caractère*/
 			totalLen++;
 		}
