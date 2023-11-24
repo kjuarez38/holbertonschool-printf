@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	va_list avar;
 	int totalLen = 0;
 
+
 	if (!format || (strlen(format) == 1 && format[0] == '%'))
 		/*Vérifier si la chaîne de format est NULL*/
 		return (-1);
@@ -23,6 +24,7 @@ int _printf(const char *format, ...)
 	while (*format)
 		/*Boucle pour parcourir chaque caractère de format*/
 	{
+
 		if (*format == '%')
 			/*Vérifier si le caractère actuel est un '%'*/
 		{
@@ -34,7 +36,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(*format);
+			_putchar(*format);
 			/*Appeler directement _putchar pour imprimer le caractère*/
 			totalLen++;
 		}

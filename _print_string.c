@@ -27,7 +27,7 @@ int _print_string(char *s)
 
 	while (s[i])
 	{
-		putchar(s[i]);
+		_putchar(s[i]);
 		i++;
 	}
 	return (i);

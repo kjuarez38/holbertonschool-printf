@@ -22,14 +22,7 @@ int _function_type(char c, va_list avar)
 	{
 		if (*list[i].t == c)
 		{
-			if (*(list[i].t + 1) == 'd' || *(list[i].t + 1) == 'i')
-			{
-				return (_print_int(avar));
-			}
-			else
-			{
-				return (list[i].f(avar));
-			}
+			return (list[i].f(avar));
 		}
 		i++;
 	}
