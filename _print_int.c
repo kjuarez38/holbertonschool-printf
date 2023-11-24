@@ -1,43 +1,44 @@
 #include "main.h"
 
 /**
- * _print_int - function
- * @arg: argument variable
- * Return: number of characters printed
+ *_print_int - function
+ *@arg: argument variable
+ *Return: size
+ *
  */
 int _print_int(va_list arg)
 {
 	int n = va_arg(arg, int);
+	int r = 0;
 	int size = 0;
-	int sign = 1;
-	int digit;
-
-	if (n < 0)
-	{
-		sign = -1;
-		n *= -1;
-	}
+	int i = 0;
+	int arr[20];
 
 	if (n == 0)
 	{
-		putchar('0');
+		_putchar('0');
+		size += 1;
+		return (size);
+	}
+	if (n < 0)
+	{
+		_putchar('-');
+		size += 1;
+		n = -n;
+	}
+	while (n != 0)
+	{
+		r = n % 10;
+		n = n / 10;
+		arr[i] = r;
 		size++;
+		i++;
 	}
 
-	while (n > 0)
+	while (i > 0)
 	{
-		digit = n % 10;
-		putchar(digit + '0');
-		size++;
-		n /= 10;
-	}
-
-	if (sign == -1)
-	{
-		putchar('-');
-		size++;
+		_putchar(arr[--i] + '0');
 	}
 
 	return (size);
 }
-
