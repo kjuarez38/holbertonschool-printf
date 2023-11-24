@@ -1,0 +1,54 @@
+.\" Manpage for _print_int function
+.\" Contact kaispaumond@example.com for improvements, bugs, and suggestions.
+.\" Copyright 2023 Kais Paumond and Jonhatan Ismael.
+.TH MAN_PRINTF 3 "2023-07-27" "Version 1.0" "Print Integer Function"
+
+.SH NAME
+_print_int - Print an integer to the standard output.
+
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.B int _print_int(va_list arg);
+
+.SH DESCRIPTION
+The _print_int function is used to print an integer to the standard output. It takes a single argument of type "va_list," which is a variable-length argument list as used by the "stdarg.h" library.
+
+.SH PARAMETERS
+.PP
+.B arg
+The argument variable of type "va_list" containing the integer to be printed.
+
+.SH RETURN VALUE
+The _print_int function returns the number of characters printed.
+
+.SH EXAMPLES
+To print an integer using _print_int, you can use the following code:
+.nf
+.B #include "main.h"
+.B #include <stdio.h>
+
+int main() {
+    int num = 42;
+    int printed = _print_int(num);
+    printf("Printed: %d characters\n", printed);
+    return 0;
+}
+.fi
+This will output:
+.nf
+Printed: 2 characters
+.fi
+
+.SH SEE ALSO
+.B printf(3), putchar(3), va_list(3)
+
+.SH AUTHORS
+The \fI_print_int\fP function was implemented by Kais Paumond and Jonhatan Ismael.
+
+.SH COPYRIGHT
+Copyright 2023 Kais Paumond and Jonathan Ismael.
+
+
+
+
